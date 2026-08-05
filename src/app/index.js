@@ -1,7 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image } from 'react-native';
-
-export default function App() {
+import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
+import { Link } from 'expo-router';
+export default function Index() {   
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -18,9 +19,16 @@ export default function App() {
           source={{ uri: 'https://reactnative.dev/img/tiny_logo.png' }}
           style={{ width: 60, height: 60, borderRadius: 30 }}
           />
-        <Text style={{ fontSize: 20, fontWeight: 'bold' }}>My App</Text>
-        
+        <Text style={{ fontSize: 20, fontWeight: 'bold' }}>Home</Text>
+            <Link href="/contact" style={{ color: 'blue' }}>
+                <FontAwesome5 name="user-plus" size={30} color="#000" />
+            </Link>
+            
         </View>
+       
+           
+        
+        
       </View>
        <View style={styles.section1}>
           <View style={styles.content_cards}>
